@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts for modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f8ffae 0%, #43c6ac 100%);
+            min-height: 10vh;
+        }
+        header {
+            background: linear-gradient(90deg, #813804 0%, #ee0979 100%);
+            color: #fff;
+            padding: 24px 0 16px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+        nav {
+            margin-top: 12px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #b0ff82;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 100px auto;
+            padding: 0 16px;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 18px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+            color: #333;
+        }
+        .card-desc {
+            font-size: 0.98rem;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        .card-price {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ee0979;
+            margin-bottom: 12px;
+        }
+        .card-btn {
+            background: linear-gradient(90deg, #43c6ac 0%, #f8ffae 100%);
+            color: #222;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 0;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .card-btn:hover {
+            background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+            color: #fff;
+        }
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 200px;
+            font-size: 1rem;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            .container {
+                padding: 0 6px;
+            }
+            .card img {
+                height: 140px;
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Mia's Shop</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <section class="products">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Clothes">
+                <div class="card-content">
+                    <div class="card-title">Clothes</div>
+                    <div class="card-desc">Upgrade your formal wear with our tailored suits,crafted with precision and attention to detail.</div>
+                    <div class="card-price">$39.99</div>
+                    <button class="card-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Assorted skincare and beauty products including creams, serums, and a jade roller arranged on a white countertop with soft daylight, conveying a fresh and soothing atmosphere">
+                <div class="card-content">
+                    <div class="card-title">Electronics</div>
+                    <div class="card-desc">Experience the latest technology with our range of smartphones,featuring advanced cameras and powerful.</div>
+                    <div class="card-price">$24.99</div>
+                    <button class="card-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=400&q=80" alt="Stack of hardcover books with colorful spines arranged on a wooden table, soft natural light from a nearby window, creating a calm and inviting atmosphere">
+                <div class="card-content">
+                    <div class="card-title">Books</div>
+                    <div class="card-desc">Experience the quality and reliability that our user-friendly selection and helpful resources.</div>
+                    <div class="card-price">$19.99</div>
+                    <button class="card-btn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        &copy; 2024 Mia's Modern Shop. All rights reserved.
+    </footer>
+</body>
+</html>
